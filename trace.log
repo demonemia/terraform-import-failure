@@ -1,0 +1,85 @@
+020/09/09 17:11:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/azurerm\"]": visit complete
+2020-09-09T17:11:43.737-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: [DEBUG] Determining which Resource Providers require Registration
+2020-09-09T17:11:43.737-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: [DEBUG] All required Resource Providers are registered
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_1.azurerm_resource_group.resource_group"
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_1.azurerm_resource_group.resource_group (import id \"<removed>\")"
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_2.azurerm_resource_group.resource_group"
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group (import id \"<removed>\")": starting visit (*terraform.graphNodeImportState)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_2.azurerm_resource_group.resource_group": starting visit (*terraform.NodeAbstractResource)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_2.azurerm_resource_group.resource_group": visit complete
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group": starting visit (*terraform.NodeAbstractResource)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group (import id \"<removed>\")": evaluating
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group": visit complete
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_2 (close)"
+2020/09/09 17:11:43 [TRACE] [walkImport] Entering eval tree: module.resource_group_1.azurerm_resource_group.resource_group (import id "<removed>")
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_2 (close)": starting visit (*terraform.nodeCloseModule)
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_1.data.azurerm_kubernetes_cluster.kuberentes_cluster"
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.data.azurerm_kubernetes_cluster.kuberentes_cluster": starting visit (*terraform.NodeAbstractResource)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_2 (close)": evaluating
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.data.azurerm_kubernetes_cluster.kuberentes_cluster": visit complete
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalImportState
+2020/09/09 17:11:43 [TRACE] [walkImport] Entering eval tree: module.resource_group_2 (close)
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: terraform.EvalNoop
+2020/09/09 17:11:43 [TRACE] [walkImport] Exiting eval tree: module.resource_group_2 (close)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_2 (close)": visit complete
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster"
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster": starting visit (*terraform.NodeApplyableProvider)
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster": evaluating
+2020/09/09 17:11:43 [TRACE] [walkImport] Entering eval tree: module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-09T17:11:43.738-0400 [INFO]  plugin: configuring client automatic mTLS
+2020/09/09 17:11:43 [TRACE] GRPCProvider: ImportResourceState
+2020-09-09T17:11:43.740-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: [DEBUG] Importing Resource - parsing "<removed>"
+2020/09/09 17:11:43 [TRACE] EvalImportState: import module.resource_group_1.azurerm_resource_group.resource_group "<removed>" produced instance object of type azurerm_resource_group
+2020/09/09 17:11:43 [TRACE] [walkImport] Exiting eval tree: module.resource_group_1.azurerm_resource_group.resource_group (import id "<removed>")
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group (import id \"<removed>\")": expanding dynamic subgraph
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.azurerm_resource_group.resource_group (import id \"<removed>\")": entering dynamic subgraph
+2020/09/09 17:11:43 [TRACE] dag/walk: visiting "import module.resource_group_1.azurerm_resource_group.resource_group result"
+2020/09/09 17:11:43 [TRACE] vertex "import module.resource_group_1.azurerm_resource_group.resource_group result": starting visit (*terraform.graphNodeImportStateSub)
+2020/09/09 17:11:43 [TRACE] vertex "import module.resource_group_1.azurerm_resource_group.resource_group result": evaluating
+2020/09/09 17:11:43 [TRACE] [walkImport] Entering eval tree: import module.resource_group_1.azurerm_resource_group.resource_group result
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalGetProvider
+2020-09-09T17:11:43.765-0400 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.1/darwin_amd64/terraform-provider-kubernetes_v1.13.1_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.1/darwin_amd64/terraform-provider-kubernetes_v1.13.1_x4]
+2020-09-09T17:11:43.773-0400 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.1/darwin_amd64/terraform-provider-kubernetes_v1.13.1_x4 pid=64237
+2020-09-09T17:11:43.773-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/kubernetes/1.13.1/darwin_amd64/terraform-provider-kubernetes_v1.13.1_x4
+2020-09-09T17:11:43.810-0400 [INFO]  plugin.terraform-provider-kubernetes_v1.13.1_x4: configuring server automatic mTLS: timestamp=2020-09-09T17:11:43.810-0400
+2020-09-09T17:11:43.844-0400 [DEBUG] plugin: using plugin: version=5
+2020-09-09T17:11:43.844-0400 [DEBUG] plugin.terraform-provider-kubernetes_v1.13.1_x4: plugin address: address=/var/folders/n_/7954d8rj5gg8pyqsk1q8mww40000gn/T/plugin789269944 network=unix timestamp=2020-09-09T17:11:43.844-0400
+2020/09/09 17:11:43 [TRACE] BuiltinEvalContext: Initialized "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster" provider for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster
+2020/09/09 17:11:43 [TRACE] eval: terraform.EvalNoop
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalGetProvider
+2020-09-09T17:11:43.905-0400 [TRACE] plugin.stdio: waiting for stdio data
+2020/09/09 17:11:43 [TRACE] eval: terraform.EvalNoop
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/09 17:11:43 [TRACE] eval: *terraform.EvalRefresh
+2020/09/09 17:11:43 [TRACE] buildProviderConfig for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster: using explicit config only
+2020/09/09 17:11:43 [TRACE] GRPCProvider: GetSchema
+2020/09/09 17:11:43 [TRACE] GRPCProvider: ReadResource
+2020-09-09T17:11:43.905-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: [DEBUG] AzureRM Request: 
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: GET <removed>?api-version=2018-05-01 HTTP/1.1
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: Host: management.azure.com
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: User-Agent: Go/go1.14.5 (amd64-darwin) go-autorest/v14.0.0 Azure-SDK-For-Go/v44.2.0 resources/2018-05-01 HashiCorp Terraform/0.13.2 (+https://www.terraform.io) Terraform Plugin SDK/1.13.1 terraform-provider-azurerm/2.26.0
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: X-Ms-Correlation-Request-Id: <removed>
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: Accept-Encoding: gzip
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: 
+2020-09-09T17:11:43.906-0400 [DEBUG] plugin.terraform-provider-azurerm_v2.26.0_x5: 
+module.resource_group_1.azurerm_resource_group.resource_group: Refreshing state... [id=<removed>]
+2020/09/09 17:11:43 [TRACE] No provider meta schema returned
+2020/09/09 17:11:43 [WARN] eval: *terraform.EvalConfigProvider, non-fatal err: Invalid provider configuration: The configuration for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster depends on values that cannot be determined until apply.
+2020/09/09 17:11:43 [ERROR] eval: *terraform.EvalSequence, err: Invalid provider configuration: The configuration for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster depends on values that cannot be determined until apply.
+2020/09/09 17:11:43 [ERROR] eval: *terraform.EvalOpFilter, err: Invalid provider configuration: The configuration for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster depends on values that cannot be determined until apply.
+2020/09/09 17:11:43 [ERROR] eval: *terraform.EvalSequence, err: Invalid provider configuration: The configuration for module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster depends on values that cannot be determined until apply.
+2020/09/09 17:11:43 [TRACE] [walkImport] Exiting eval tree: module.resource_group_1.provider["registry.terraform.io/hashicorp/kubernetes"].kubernetes_cluster
+2020/09/09 17:11:43 [TRACE] vertex "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster": visit complete
+2020/09/09 17:11:43 [TRACE] dag/walk: upstream of "module.resource_group_1.kubernetes_namespace.application_1" errored, so skipping
+2020/09/09 17:11:43 [TRACE] dag/walk: upstream of "module.resource_group_1.provider[\"registry.terraform.io/hashicorp/kubernetes\"].kubernetes_cluster (close)" errored, so skipping
